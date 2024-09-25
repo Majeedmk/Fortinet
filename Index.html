@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>إرسال رسالة إلى WhatsApp</title>
+</head>
+<body>
+  <h1>إرسال رسالة إلى WhatsApp</h1>
+  <p>انقر فوق الارتباط أدناه لإرسال رسالة إلى رقم هاتفك على WhatsApp:</p>
+  <a href="#" onclick="sendWhatsAppMessage()">إرسال رسالة</a>
+
+  <script>
+    function sendWhatsAppMessage() {
+      // رقم هاتف المستلم (بصيغة دولية، يبدأ بالرمز الدولي بدون علامة +)
+      const phoneNumber = "218921688716";
+
+      // نص الرسالة
+      const message = "مرحباً من JavaScript!";
+
+      // إنشاء الرابط
+      const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
+
+      // فتح الرابط في نافذة جديدة
+      window.open(whatsappLink);
+    }
+  </script>
+
+</body>
+
+</html>
